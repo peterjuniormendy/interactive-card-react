@@ -1,38 +1,200 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+.container {
+  width: 1440px;
+  height: 800px;
+  margin: auto;
+  margin-top: 80px;
+  display: flex;
+}
+.left {
+  width: 35%;
+  position: relative;
+  background: url(./images/bg-main-desktop.png) no-repeat center;
+}
+
+.right {
+  width: 65%;
+  background: rgb(252, 250, 250);
+}
+
+.cardFront {
+  position: absolute;
+  top: 150px;
+  left: 10rem;
+}
+.cardBack {
+  position: absolute;
+  top: 450px;
+  left: 15rem;
+}
+
+form,
+.thank-you-card {
+  width: 550px;
+  margin: 20% 0 0 300px;
+  padding: 20px 25px;
+}
+.form-group {
+  margin-bottom: 25px;
+}
+label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 24px;
+  padding: 12px 15px;
+}
+.red {
+  border: 2px solid red;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+#date {
+  margin-right: 15px;
+}
+.exp-date-group,
+.cvc-group {
+  width: 48%;
+}
+
+.card-logo {
+  position: absolute;
+  top: 22%;
+  left: 190px;
+  z-index: 10;
+}
+.card-numbers {
+  color: white;
+  font-size: 32px;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 33%;
+  right: -75px;
+  z-index: 10;
+}
+.name-and-date-wrapper {
+  color: white;
+  width: 78%;
+  align-items: center;
+  position: absolute;
+  top: 43%;
+  left: 185px;
+  z-index: 10;
+}
+.cvc-holder {
+  color: white;
+  position: absolute;
+  top: 70%;
+  right: -120px;
+  z-index: 10;
+}
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  font-size: 22px;
+}
+
+/* THANK YOU CARD SYTLES */
+.wrapper {
+  padding: 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+.error {
+  color: red;
+  margin-top: 7px;
+}
+.message {
+  margin-top: 35px;
+  margin-bottom: 55px;
+  font-size: 25px;
+  color: green;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .container {
+    margin-top: 30px;
+    width: 375px;
+    flex-direction: column;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .left {
+    width: 100%;
+    height: 30%;
+    background: url(./images/bg-main-mobile.png) no-repeat center;
+    background-size: cover;
   }
-  to {
-    transform: rotate(360deg);
+  .right {
+    width: 100%;
+    height: auto;
+  }
+  .cardBack {
+    position: relative;
+    width: 300px;
+    top: -55%;
+    left: 50px;
+  }
+  .cardFront {
+    position: relative;
+    width: 300px;
+    top: 130px;
+    left: 25px;
+    z-index: 10;
+  }
+  .cvc-holder {
+    position: absolute;
+    top: 45%;
+    right: 65px;
+  }
+
+  .card-logo {
+    position: absolute;
+    width: 50px;
+    top: 62%;
+    left: 45px;
+  }
+  .card-numbers {
+    position: absolute;
+    width: 70%;
+    font-size: 20px;
+    top: 82%;
+    left: 46px;
+  }
+  .name-and-date-wrapper {
+    width: 65%;
+    height: 30px;
+    top: 105%;
+    left: 50px;
+  }
+  form,
+  .thank-you-card {
+    width: 100%;
+    margin: 75px 0 0 0;
+  }
+  #date {
+    margin-right: 10px;
   }
 }
